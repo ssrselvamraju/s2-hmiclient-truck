@@ -1,0 +1,577 @@
+# S2HMI config file.
+# 20-Aug-2013.
+	
+# Client page(s) version.
+[clientversion]
+ver=Ver 2.0 Test
+	
+# Server ID.
+[serverid]
+id=S2 Modbus server
+
+#########################################################
+
+###MENU Buttons####
+
+[MenuOp]
+addrtype=coil
+memaddr=1110
+
+[MenuEng]
+addrtype=coil
+memaddr=1111
+
+[MenuGrph]
+addrtype=coil
+memaddr=1112
+
+[MenuDummy]
+addrtype=coil
+memaddr=1113
+
+####Speed and angle displays######
+
+[SpeedDispAct]
+addrtype=inputreg
+memaddr=16
+datatype=integer
+range=0, 3000
+scale=0, 1
+
+[SpeedDispSet]
+addrtype=holdingreg
+memaddr=10
+datatype=integer
+range=0,3000
+scale=0, 1
+
+[SpeedColumnUpAct]
+addrtype=inputreg
+memaddr=16
+datatype=integer
+range=0, 3000
+scale=0,1
+
+[SpeedColumnUpSet]
+addrtype=holdingreg
+memaddr=10
+datatype=integer
+range=0, 3000
+scale=0,1
+
+[SpeedColumnDownAct]
+addrtype=inputreg
+memaddr=16
+datatype=integer
+scale=0,1
+
+[SpeedColumnDownSet]
+addrtype=holdingreg
+memaddr=10
+datatype=integer
+scale=0,1
+
+[SteerDispTxtAct]
+addrtype=inputreg
+memaddr=9
+datatype=integer
+range=0, 360
+scale=0, 1
+
+[SteerDispTxtSet]
+addrtype=holdingreg
+memaddr=11
+datatype=integer
+range=0, 360
+scale=0, 1
+
+[AnglePtrAct]
+addrtype=inputreg
+memaddr=9
+datatype=integer
+range= 0, 360
+scale=0,1
+
+[AnglePtrSet]
+addrtype=holdingreg
+memaddr=11
+datatype=integer
+range= 0, 360
+scale=0,1
+
+[SpeedEncoderDisp]
+addrtype=inputreg32
+memaddr=12
+datatype=integer
+range = -2147483648, 2147483647
+scale = 0, 1
+
+[AngleEncoderDisp]
+addrtype=inputreg32
+memaddr=10
+datatype=integer
+range = -2147483648, 2147483647
+scale = 0, 1
+
+
+###Speed and angle buttons####
+
+[SpeedUp]
+addrtype=holdingreg
+memaddr=10
+datatype=integer
+scale=0, 1
+
+[SpeedDown]
+addrtype=holdingreg
+memaddr=10
+datatype=integer
+scale=0, 1
+
+[SpeedUp10]
+addrtype=holdingreg
+memaddr=10
+datatype=integer
+scale=0, 1
+
+[SpeedDown10]
+addrtype=holdingreg
+memaddr=10
+datatype=integer
+scale=0, 1
+
+[SpeedUp100]
+addrtype=holdingreg
+memaddr=10
+datatype=integer
+scale=0, 1
+
+[SpeedDown100]
+addrtype=holdingreg
+memaddr=10
+datatype=integer
+scale=0, 1
+
+[SpeedMax]
+addrtype=holdingreg
+memaddr=10
+datatype=integer
+scale=0, 1
+
+[SpeedZero]
+addrtype=holdingreg
+memaddr=10
+datatype=integer
+scale=0, 1
+
+
+[AngleLeft]
+addrtype=holdingreg
+memaddr=11
+datatype=integer
+scale=0, 1
+
+[AngleRight]
+addrtype=holdingreg
+memaddr=11
+datatype=integer
+scale=0, 1
+
+[AngleLeft10]
+addrtype=holdingreg
+memaddr=11
+datatype=integer
+scale=0, 1
+
+[AngleRight10]
+addrtype=holdingreg
+memaddr=11
+datatype=integer
+scale=0, 1
+
+[AngleLeft100]
+addrtype=holdingreg
+memaddr=11
+datatype=integer
+scale=0, 1
+
+[AngleRight100]
+addrtype=holdingreg
+memaddr=11
+datatype=integer
+scale=0, 1
+
+[AngleLeftMax]
+addrtype=holdingreg
+memaddr=11
+datatype=integer
+scale=0, 1
+
+[AngleRightMax]
+addrtype=holdingreg
+memaddr=11
+datatype=integer
+scale=0, 1
+
+[AngleCenter]
+addrtype=holdingreg
+memaddr=11
+datatype=integer
+scale=0, 1
+
+
+#######E-Stop and Honk buttons#####
+
+[EStop]
+addrtype=coil
+memaddr=8
+
+[Honk]
+addrtype=coil
+memaddr=9
+
+[Traction_Enable]
+addrtype=coil
+memaddr=8
+
+
+#####Global Swtich#####
+
+[GS_ON]
+addrtype=coil
+memaddr=2
+
+[GS_OFF]
+addrtype=coil
+memaddr=2
+
+[GlobalSwitchButton]
+addrtype=coil
+memaddr=3
+
+[OnLight]
+addrtype=coil
+memaddr=2
+
+################################
+
+####D_INs####
+
+[din1]
+addrtype=discrete
+memaddr=0
+
+[din2]
+addrtype=discrete
+memaddr=1
+
+[din3]
+addrtype=discrete
+memaddr=2
+
+[din4]
+addrtype=discrete
+memaddr=3
+
+[din5]
+addrtype=discrete
+memaddr=4
+
+[din6]
+addrtype=discrete
+memaddr=5
+
+[din7]
+addrtype=discrete
+memaddr=6
+
+[din8]
+addrtype=discrete
+memaddr=7
+
+
+####D_OUTs####
+
+[dout1]
+addrtype=coil
+memaddr=0
+
+[dout2]
+addrtype=coil
+memaddr=1
+
+[dout3]
+addrtype=coil
+memaddr=2
+
+[dout4]
+addrtype=coil
+memaddr=3
+
+[dout5]
+addrtype=coil
+memaddr=4
+
+[dout6]
+addrtype=coil
+memaddr=5
+
+[dout7]
+addrtype=coil
+memaddr=6
+
+[dout8]
+addrtype=coil
+memaddr=7
+
+####D_OUT_Store####
+
+[d1]
+addrtype=coil
+memaddr=0
+
+[d2]
+addrtype=coil
+memaddr=1
+
+[d3]
+addrtype=coil
+memaddr=2
+
+[d4]
+addrtype=coil
+memaddr=3
+
+[d5]
+addrtype=coil
+memaddr=4
+
+[d6]
+addrtype=coil
+memaddr=5
+
+[d7]
+addrtype=coil
+memaddr=6
+
+[d8]
+addrtype=coil
+memaddr=7
+
+
+
+####A_INs##
+
+[ain1]
+addrtype=inputreg
+memaddr=0
+datatype=integer
+
+[ain2]
+addrtype=inputreg
+memaddr=1
+datatype=integer
+
+[ain3]
+addrtype=inputreg
+memaddr=2
+datatype=integer
+
+[ain4]
+addrtype=inputreg
+memaddr=3
+datatype=integer
+
+[ain5]
+addrtype=inputreg
+memaddr=4
+datatype=integer
+
+[ain6]
+addrtype=inputreg
+memaddr=5
+datatype=integer
+
+[ain7]
+addrtype=inputreg
+memaddr=6
+datatype=integer
+
+[ain8]
+addrtype=inputreg
+memaddr=7
+datatype=integer
+
+####A_OUTs##
+
+[aout1]
+addrtype=holdingreg
+memaddr=0
+datatype=integer
+
+[aout2]
+addrtype=holdingreg
+memaddr=1
+datatype=integer
+
+[aout3]
+addrtype=holdingreg
+memaddr=2
+datatype=integer
+
+[aout4]
+addrtype=holdingreg
+memaddr=3
+datatype=integer
+
+[aout5]
+addrtype=holdingreg
+memaddr=4
+datatype=integer
+
+[aout6]
+addrtype=holdingreg
+memaddr=5
+datatype=integer
+
+[aout7]
+addrtype=holdingreg
+memaddr=6
+datatype=integer
+
+[aout8]
+addrtype=holdingreg
+memaddr=7
+datatype=integer
+
+####A_OUT_Store##
+
+[a1]
+addrtype=holdingreg
+memaddr=0
+datatype=integer
+
+[a2]
+addrtype=holdingreg
+memaddr=1
+datatype=integer
+
+[a3]
+addrtype=holdingreg
+memaddr=2
+datatype=integer
+
+[a4]
+addrtype=holdingreg
+memaddr=3
+datatype=integer
+
+[a5]
+addrtype=holdingreg
+memaddr=4
+datatype=integer
+
+[a6]
+addrtype=holdingreg
+memaddr=5
+datatype=integer
+
+[a7]
+addrtype=holdingreg
+memaddr=6
+datatype=integer
+
+[a8]
+addrtype=holdingreg
+memaddr=7
+datatype=integer
+
+###IntegerWriter####
+[NumericWriter]
+addrtype=holdingreg
+memaddr=2500
+datatype=integer
+
+##################################################
+###GraphScreen####
+
+[GraphSpeed]
+addrtype=holdingreg
+memaddr=16
+datatype=integer
+range = 0, 3000
+scale = 0, 0.1
+
+[GrphScrTxt]
+addrtype=holdingreg
+memaddr=16
+datatype=integer
+scale = 0, 1
+
+
+####################################################
+####################################################
+##################S2Speedo##########################
+####################################################
+####################################################
+
+[Z2TillerAngle]
+addrtype=inputreg
+memaddr=9
+datatype=integer
+scale=0, 1
+
+[Z2TruckSpeed]
+addrtype=inputreg
+memaddr=16
+datatype=integer
+scale = 0, 1
+
+[Z2DistTrav]
+addrtype=inputreg
+memaddr=17
+datatype=float
+scale = 0, 1
+
+[Z2x]
+addrtype=inputregfloat
+memaddr=22
+datatype=float
+range = -2147483648, 2147483647
+scale = 0, 1
+
+[Z2y]
+addrtype=inputregfloat
+memaddr=20
+datatype=float
+range = -2147483648, 2147483647
+scale = 0, 1
+
+[Z2h]
+addrtype=inputreg
+memaddr=18
+datatype=integer
+range = -2147483648, 2147483647
+scale = 0, 1
+
+
+#########################################################
+#########################################################
+
+# Event definitions.
+[&events]
+base=32300
+#0=PumpRunning, zone3
+#1=PumpStopped, zone3
+#2=Tank1Empty, zone1
+#3=Tank1Full, zone1, zone2
+#4=Tank2Empty, zone2
+#5=Tank2Full, zone2
+	
+# Alarm definitions.
+[&alarms]
+base=32400
+#0=PB1Alarm, zone1
+#1=PB2Alarm, zone2
+#2=PB3Alarm, zone3
+
