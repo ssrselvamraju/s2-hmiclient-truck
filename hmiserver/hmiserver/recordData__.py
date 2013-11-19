@@ -89,19 +89,20 @@ ExtData3 = ModbusExtData.ExtendedDataTypes(recDataClient1)
 
 while True:
 
+	#ExtData3.SetHRegStr16(100,30,"Press Start to Train Route")
+
 	train_mode = recDataClient1.GetCoilsBool(31) #1 for train start, 0 for train stop
 
-	#replay_mode = recDataClient1.GetCoilsBool(32) #1 for replay start, 0 when done
+	
 
 	while not train_mode:
 		train_mode = recDataClient1.GetCoilsBool(31)
 
+	#ExtData3.SetHRegStr16(100,30,"Training Route")
+
 
 	recDataClient1.SetCoilsBool(40,1)
-	#if record_mode:
-	#file = open("truckData_replay.dat","w")
-	#else:
-
+	
 	file = open("truckData.dat", "w")
 
 	file.write( "###Truck route record\n" )
@@ -121,17 +122,17 @@ while True:
 		print str(tractionEncoder) + "\t" + str(tillerAngle)
 
 		file.write( str(i) + '\t' + str(valVF) + '\t' + str(valVL) + '\t' + str(truckHeading) + '\t' + str(tractionEncoder) + '\t' + str(tillerAngle) + '\n' )
-		time.sleep(0.5)
+		
+#		time.sleep(0.5)
 
 		file.close()		
 
-		#if record_mode:
-		#	file = open("truckData_replay.dat","a")
-		#else:
 		file = open("truckData.dat", "a")
 
 	file.close()
 	print "Training complete"
+	#ExtData3.SetHRegStr16(100,30,"Training Route Complete")
+	time.sleep(10)
 
 	#		print "Here"
 	#print "Here2"
