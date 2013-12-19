@@ -32,6 +32,12 @@ _VERSION = '30-Aug-2013'
 _HelpStr = """
 %s, %s
 This module logs the Vehicle Forward and Vehicle Lateral information which is calculated at the Server and stored in allocated InputRegisters as a Float Value. The data is logged into a .dat file which is in a format used by gnuplot, to give a plot of the path navigated by the truck.
+In this file, the data is modified and stored to be able to be plotted on the Seegrid map (either live or static).
+
+This file asks for two position codes:
+1 - Starts at the bottom left corner of the MFG floor on the map (near the door to the kitchen) and start position faces in the direction of the Engineering Entrance door.
+2 - Starts at the bottom left corner of the MFG floor on the map (near the door to the kitchen) and start position faces in the direction of the MFG inventory/Building's rear exit door.
+
 Just like the standard clients this client has to be started with the command line parameters (which are supposed to be the same as those in the MBClient and this program should run on the same computer that runs the standard client.
 
 Any parameters which are not specified will use their default values. 
@@ -88,7 +94,7 @@ ExtData2 = ModbusExtData.ExtendedDataTypes(PDClient1)
 #file2 = open("truckHeading.dat","w")
 #file2.write( "0" + '\t' + "0" + '\t' + "0" + '\t' + "0" + '\n' )
 #file2.close()
-choice = int(raw_input("\nEnter start position code: "))
+choice = int(raw_input("\nEnter start position code [See readme for instructions]: "))
 
 file = open("truckPurple.dat","w")
 
